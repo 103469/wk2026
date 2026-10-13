@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WK 2026 Hub - Home</title>
+
+    <!-- Tailwind CSS (lokaal gebouwd met de CLI) -->
+    <link href="output.css" rel="stylesheet">
+
+    <!-- Lettertypes: Anton voor koppen, Outfit voor tekst -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        h1, h2, h3, .logo { font-family: 'Anton', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 lg:h-screen lg:overflow-hidden lg:flex lg:flex-col">
+
+    <!-- Navigatiebalk -->
+    <header class="bg-blue-950 sticky top-0 z-20 lg:shrink-0">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="logo text-2xl text-white">⚽ WK <span class="text-amber-400">2026</span></a>
+            <nav class="flex gap-2 text-sm font-semibold">
+                <a href="index.html" class="px-3 py-2 rounded bg-green-600 text-white">Home</a>
+                <a href="landen.php" class="px-3 py-2 rounded text-gray-300 hover:bg-white/10 hover:text-white">Landen</a>
+                <a href="bracket.php" class="px-3 py-2 rounded text-gray-300 hover:bg-white/10 hover:text-white">Bracket</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero: foto als achtergrond -->
+    <section class="relative bg-blue-950 bg-cover bg-center flex items-center min-h-[70vh] lg:min-h-0 lg:flex-1"
+             style="background-image: url('img/hero.webp');">
+        <!-- Donkere overlay zodat de tekst leesbaar blijft -->
+        <div class="absolute inset-0 bg-blue-950/75"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 w-full py-8 grid md:grid-cols-2 gap-8 items-center text-white">
+            <div>
+                <h1 class="text-5xl md:text-6xl">WK <span class="text-amber-400">2026</span> HUB</h1>
+                <p class="mt-4 text-gray-200">
+                    Het WK 2026 wordt het grootste ooit: 48 landen, verdeeld over 12 groepen,
+                    spelen samen 104 wedstrijden in de Verenigde Staten, Canada en Mexico.
+                    Bekijk alle deelnemers, de groepen en de standen.
+                </p>
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="landen.php" class="bg-green-600 hover:bg-green-700 text-white font-bold px-5 py-3 rounded-lg">Bekijk de landen</a>
+                    <a href="bracket.php" class="bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-3 rounded-lg">Bekijk de standen</a>
+                </div>
+            </div>
+
+            <div class="bg-white/10 rounded-xl flex items-center justify-center p-8 min-h-[240px]">
+                <span class="text-9xl">🌍</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zoekbalk + drie kerngetallen -->
+    <section class="bg-gray-100 lg:shrink-0">
+        <div class="max-w-5xl mx-auto px-4 py-5">
+            <form action="landen.php" method="GET">
+                <input type="text" name="q" placeholder="🔍 Zoek direct je land..."
+                       class="w-full bg-white border border-gray-300 rounded-xl px-5 py-3 outline-none focus:border-green-600">
+            </form>
+
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-white border border-gray-300 rounded-xl p-4 text-center">
+                    <p class="text-6xl font-bold text-green-700">48</p>
+                    <p class="text-gray-500 mt-1">deelnemende landen</p>
+                </div>
+                <div class="bg-white border border-gray-300 rounded-xl p-4 text-center">
+                    <p class="text-6xl font-bold text-green-700">12</p>
+                    <p class="text-gray-500 mt-1">groepen van vier</p>
+                </div>
+                <div class="bg-white border border-gray-300 rounded-xl p-4 text-center">
+                    <p class="text-6xl font-bold text-green-700">104</p>
+                    <p class="text-gray-500 mt-1">wedstrijden</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-950 text-gray-300 text-center text-sm py-4 lg:shrink-0">
+        WK 2026 Hub · gemaakt door Quinten Löb
+    </footer>
+
+</body>
+</html>
