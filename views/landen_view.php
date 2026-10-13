@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landen - WK 2026 Hub</title>
+    <title>Landen - WK 2026</title>
     <link href="output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -78,7 +78,7 @@
     </section>
 
     <footer class="bg-blue-950 text-gray-300 text-center text-sm py-8">
-        WK 2026 Hub · gemaakt met HTML, Tailwind CSS, PHP en SQLite
+        WK 2026 · gemaakt met HTML, Tailwind CSS, PHP en SQLite
     </footer>
 
 </body>
